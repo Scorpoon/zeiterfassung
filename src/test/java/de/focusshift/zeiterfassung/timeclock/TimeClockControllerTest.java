@@ -3,10 +3,12 @@ package de.focusshift.zeiterfassung.timeclock;
 import de.focusshift.zeiterfassung.user.CurrentUserProvider;
 import de.focusshift.zeiterfassung.user.UserId;
 import de.focusshift.zeiterfassung.web.DoubleFormatter;
+import de.focusshift.zeiterfassung.web.MenuProperties;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.context.annotation.Import;
 import org.springframework.security.web.context.SecurityContextPersistenceFilter;
 import org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver;
 import org.springframework.test.web.servlet.ResultActions;
@@ -39,6 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
 
 @WebMvcTest(controllers = {TimeClockController.class})
+@Import({MenuProperties.class})
 class TimeClockControllerTest {
 
     private static final ZoneId ZONE_EUROPE_BERLIN = ZoneId.of("Europe/Berlin");

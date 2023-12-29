@@ -24,6 +24,13 @@ body {
   min-height: --webkit-fill-available;
   background-image: linear-gradient(#ffffff, #fafafa);
   background-attachment: fixed;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "banner banner"
+    "navigation content";
 }
 
 input:not([class*="rounded"]),
@@ -33,7 +40,9 @@ textarea:not([class*="rounded"]) {
 
 @font-face {
   font-family: "KaushanScript";
-  src: local("KaushanScript"), local("KaushanScript Regular"),
+  src:
+    local("KaushanScript"),
+    local("KaushanScript Regular"),
     local("KaushanScript-Regular"),
     url("/fonts/kaushanscript/KaushanScript-Regular.woff2") format("woff2"),
     url("/fonts/kaushanscript/KaushanScript-Regular.woff") format("woff");

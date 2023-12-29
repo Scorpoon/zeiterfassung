@@ -12,7 +12,7 @@
 }
 
 #menu-toggle-checkbox:checked ~ label ~ nav {
-  top: calc(var(--navigation-header-height) + 1.5rem);
+  top: 1.5rem;
 }
 
 .navigation-content-spacer {
@@ -138,7 +138,7 @@
 
   #menu-toggle-checkbox:checked ~ label ~ nav,
   #menu-toggle-checkbox:checked ~ label ~ nav:focus-within {
-    top: var(--navigation-header-height);
+    top: 0;
     max-height: 100vh !important;
   }
 }
@@ -195,7 +195,7 @@
 }
 
 .nav-popup-menu.visible {
-  top: calc(var(--navigation-header-height) + 1.5rem);
+  top: 1.5rem;
 }
 
 .nav-popup-menu-inner {

@@ -1,8 +1,6 @@
 @tailwind base;
 
 :root {
-  --navigation-header-height: 3rem;
-
   /* 500 */
   --absence-color-GRAY: #6b7280;
   --absence-color-ORANGE: #f97316;

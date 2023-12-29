@@ -1,12 +1,29 @@
 #menu-toggle-checkbox ~ label ~ nav {
-  @apply px-6;
-  @apply py-8;
   @apply transition-all;
   @apply duration-150;
+  opacity: 0;
+
+  width: 100%;
+  position: fixed;
+  /*top: 3rem; !* menu icon *!*/
+  top: 6rem; /* menu icon + banner + stopwatch */
+  bottom: 0;
+  left: -100%;
+  background: white;
+  z-index: 999999;
+
+  @apply px-3;
 }
 
 #menu-toggle-checkbox:checked ~ label ~ nav {
-  top: 1.5rem;
+  opacity: 1;
+  left: 0;
+}
+
+body:has(#menu-toggle-checkbox:checked) {
+  /* prevent scrolling of hidden content */
+  /* remember to reset this on large screen to avoid content jumping when scrollbar is (always) visible */
+  overflow: hidden;
 }
 
 .navigation-content-spacer {
@@ -118,31 +135,16 @@
   background-color: transparent !important;
 }
 
-@screen xs {
-  #menu-toggle-checkbox ~ label ~ nav {
-    overflow: hidden;
-    max-height: 0;
-    top: -100%;
-    /*@apply bg-zinc-100;*/
-    /*z-index: 10;*/
-  }
-
-  #menu-toggle-checkbox:checked ~ label ~ nav,
-  #menu-toggle-checkbox:checked ~ label ~ nav:focus-within {
-    top: 0;
-    max-height: 100vh !important;
-  }
-}
-
 @screen lg {
-  #menu-toggle-checkbox ~ label ~ nav {
-    max-height: unset;
-    @apply static;
-    @apply scale-x-100;
-    @apply scale-y-100;
-    @apply opacity-100;
-    @apply py-0;
-    @apply px-0;
+  #menu-toggle-checkbox ~ label ~ nav,
+  #menu-toggle-checkbox:checked ~ label ~ nav {
+    position: static;
+    opacity: 1;
+    padding: 0;
+  }
+
+  body:has(#menu-toggle-checkbox:checked) {
+    overflow: revert;
   }
 }
 

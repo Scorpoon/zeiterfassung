@@ -187,7 +187,7 @@ body:has(#menu-toggle-checkbox:checked) {
 }
 
 .nav-popup-menu.visible {
-  top: 1.5rem;
+  top: 7rem;
 }
 
 .nav-popup-menu-inner {
@@ -220,7 +220,7 @@ body:has(.nav-popup-menu.visible) {
   height: 100%;
 }
 
-@screen xs {
+@screen lg {
   .nav-popup-menu::before {
     content: "";
     border-color: transparent;

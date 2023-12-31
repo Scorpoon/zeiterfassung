@@ -1,7 +1,7 @@
 @tailwind base;
 
 :root {
-  --top-bar-height: 3rem;
+  --top-bar-height: 3.25rem;
 
   /* 500 */
   --absence-color-GRAY: #6b7280;

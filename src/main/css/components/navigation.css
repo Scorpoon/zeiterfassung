@@ -17,7 +17,7 @@
 
 #menu-toggle-checkbox:checked ~ label ~ div {
   opacity: 1;
-  top: 7rem; /* menu icon + banner + stopwatch */
+  top: calc(var(--navigation-header-height) + 1.5rem);
 }
 
 body:has(#menu-toggle-checkbox:checked) {
@@ -187,7 +187,7 @@ body:has(#menu-toggle-checkbox:checked) {
 }
 
 .nav-popup-menu.visible {
-  top: 7rem;
+  top: calc(var(--navigation-header-height) + 1.5rem);
 }
 
 .nav-popup-menu-inner {

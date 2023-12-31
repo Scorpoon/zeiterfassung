@@ -86,7 +86,10 @@
           <div class="flex-1 flex md:gap-4">
             <div
               class="w-full border border-gray-100 bg-white rounded-xl p-4 lg:w-1/3 lg:sticky"
-              style="--display-when-visible: block; top: 1rem"
+              style="
+                --display-when-visible: block;
+                top: calc(var(--navigation-header-height) + 1rem);
+              "
               data-hidden-with-selected-user
               is="z-user-selection-list"
             >
